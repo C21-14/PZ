@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript and DOM Example</title>
+    <style>
+        .highlight {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Елементи для взаємодії -->
+    <div id="myDiv" class="highlight">Це div елемент</div>
+    <p>Це параграф</p>
+    <ul>
+        <li>Елемент списку 1</li>
+        <li>Елемент списку 2</li>
+        <li>Елемент списку 3</li>
+    </ul>
+    <a href="#" id="myLink">Це посилання</a>
+
+    <script>
+        // Вибір елементу за його id та зміна стилів і тексту
+        var myDiv = document.getElementById('myDiv');
+        myDiv.style.backgroundColor = 'lightblue';
+        myDiv.innerHTML = 'Це div елемент (змінений текст)';
+
+        // Вибір елементу за тегом та зміна тексту
+        var paragraph = document.querySelector('p');
+        paragraph.textContent = 'Це змінений параграф';
+
+        // Вибір елементів за класом та зміна стилів
+        var listItems = document.getElementsByClassName('highlight');
+        for (var i = 0; i < listItems.length; i++) {
+            listItems[i].style.fontSize = '20px';
+        }
+
+        // Навігація по DOM та виведення інформації про структуру
+        var myLink = document.getElementById('myLink');
+        console.log('Батьківський елемент посилання:', myLink.parentElement.tagName);
+        console.log('Дочірні елементи списку:');
+        var ul = document.querySelector('ul');
+        for (var i = 0; i < ul.children.length; i++) {
+            console.log(ul.children[i].textContent);
+        }
+
+        // Додавання обробника подій (клік) до посилання
+        myLink.addEventListener('click', function(event) {
+            event.preventDefault(); // Відміна стандартної дії посилання
+            alert('Ви клікнули на посилання!');
+        });
+    </script>
+
+</body>
+</html>

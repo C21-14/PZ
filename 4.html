@@ -1,0 +1,150 @@
+<!DOCTYPE html> <!-- Оголошення типу документа, HTML5 -->
+<html>
+  <head> 
+ <meta charset="UTF-8">  <!-- Встановлюємо кодування на UTF-8 -->
+<title> praktuche.zanyattya.3
+</title>   <!-- Заголовок сторінки -->
+ <style>
+  form{ border:10px ridge; /* CSS стилі для форми */
+padding:10px;
+margin-right:10px; 
+  float:right; 
+  }
+
+ </style>
+   <script>
+        function validatePassword() {
+            var password = document.getElementById("password").value; 
+              <!-- Отримуємо значення поля пароля -->
+            var confirmPassword = document.getElementById("confirm_password").value; 
+              <!-- Отримуємо значення поля підтвердження пароля -->   
+            var error = document.getElementById("error"); 
+              <!-- Отримуємо елемент для відображення повідомлень про помилки -->
+            if (password !== confirmPassword) { 
+                  <!-- Порівнюємо пароль та його підтвердження -->
+                error.innerHTML = "Passwords do not match!"; 
+              <!-- Встановлюємо повідомлення про помилку -->
+                return false; <!-- Повертаємо false, щоб форма не була відправлена -->
+            } else {
+                error.innerHTML = "";  
+               <!-- Скидаємо повідомлення про помилку, якщо паролі  співпадають -->
+                return true; <!-- Повертаємо true, щоб форма була відправлена -->
+            }
+        }
+   </script>
+  </head>
+    <body bgcolor="grey" >  <!-- Встановлюємо фоновий колір сторінки -->
+<center> <img src="https://kpi.ua/files/images-page/kpi-big-logo.png" width="100" height="100"> </center> <!-- Вставляємо зображення KПI та вирівнюємо по центру -->
+     <form action="/submit" method="post" target="_blank" onsubmit="return validatePassword()" >
+     <label for="name"><div>Ім'я:</div></label>
+        <input type="text" id="name" name="name" required><br><br> 
+          <!-- Поле для введення імені -->
+     <label for="surname"><div>Прізвище:</div></label>
+        <input type="text" id="surname" name="surname" required><br><br>
+          <!-- Поле для введення прізвища -->
+     <label for="email"><div>Email:</div></label>
+        <input type="email" id="email" name="email" required><br><br>
+          <!-- Поле для введення email -->
+     <label for="password"><div>Пароль:</div></label>
+        <input type="password" id="password" name="password" required><br><br>
+          <!-- Поле для введення пароля -->  
+     <label for="confirm_password"><div>Підтвердіть пароль:</div></label>
+        <input type="password" id="confirm_password" name="confirm_password" required><br>
+          <br>  <!-- Поле для підтвердження пароля -->
+           <span id="error" style="color:blue;"></span><br><br> 
+             <!-- Поле для відображення повідомлень про помилки -->
+        <input type="submit" value="Зареєструватися" style="width:180px;height:35px;"> 
+             <!-- Кнопка відправки форми -->
+
+     </form>
+
+     <table border="1">
+        <tr>
+	   <td>
+	   </td>
+     	   <td>Понеділок
+	   </td>
+	   <td>Вівторок
+	   </td>
+	   <td>Середа
+	   </td>
+	   <td>Четвер
+	   </td>
+	   <td>П'ятниця
+	   </td>
+	   <td>Субота
+	   </td>
+        </tr> 
+	<tr>
+	   <td> 08:30-09:15<br>9:20-10:05
+	   </td>
+     	   <td> <center> Право<br> 406</center> 
+	   </td>
+	   <td><center> Іноземна мова <br> 407a </center>
+	   </td>
+	   <td> <center> ТІМ <br> 101 </center>
+	   </td>
+	   <td> <center>ФВ<br>(Парк) </center>
+	   </td>
+	   <td> <center>СР <br>404 </center>
+	   </td>
+	   <td> <center>СР <br>107 </center>
+	   </td>
+        </tr> 
+	<tr>
+	   <td> 10:25-11:10 <br>11:15-12:00
+	   </td>
+     	   <td> <center> ФВ<br>(парк) </center>
+	   </td>
+	   <td> <center>ФВ<br>(парк) </center>
+	   </td>
+	   <td> <center>ТС<br>410 </center>
+	   </td>
+	   <td> <center>ТІМ<br>503 </center>
+	   </td>
+	   <td><center>Право<br>101 </center>
+	   </td>
+	   <td> <center>СР<br>107 </center>
+	   </td>
+        </tr> 
+	<tr>
+	   <td>12:10-13:05<br>13:10-13:55
+	   </td>
+     	   <td><center>Прога<br>406 </center>
+	   </td>
+	   <td><center>ТІМ<br>503(407б) </center>
+	   </td>
+	   <td><center>ТС<br>410 </center>
+	   </td>
+	   <td><center>Іноземна мова <br>406</center>
+	   </td>
+	   <td><center>ТІК <br>101</center>
+	   </td>
+	   <td><center>СР<br>107</center>
+	   </td>
+        </tr> 
+	<tr>
+	   <td>16:10-16:55<br>17:00-17:45
+	   </td>
+     	   <td><center>СР<br>503</center>
+	   </td>
+	   <td><center>СР<br>6</center>
+	   </td>
+	   <td><center> Прога<br>101 </center>
+	   </td>
+	   <td><center>СР<br>503 </center>
+	   </td>
+	   <td> <center>СР <br> 6</center>
+	   </td>
+	   <td>
+	   </td>
+        </tr> 
+
+
+
+
+
+
+     </table>
+ </body>
+</html>

@@ -1,0 +1,32 @@
+   body {
+    background-color: #DDA0DD;
+}
+  .header {
+background-image:url('https://funart.top/uploads/posts/2021-04/1618516143_48-funart_pro-p-oboi-fon-svetlo-sirenevii-tsvet-52.jpg');
+background-size: cover;
+}
+  a {
+color:#800080;
+text-decoration:bold;
+}
+  a:hover {
+text-decoration: underline;
+}
+       ul {
+list-style-type: square;
+
+}
+ input[type="text"], button {
+  background-color: #EE82EE;
+  border: 1px solid #EE82EE;
+  pading: 5px;
+}
+  table{
+border-collapse: collapse;
+width: 100%;
+}
+ th,td {
+border: 10px solid #FF1493;
+padding: 8px;
+text-align: left;
+}
